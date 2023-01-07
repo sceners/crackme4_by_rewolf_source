@@ -1,0 +1,52 @@
+#include "d:\masm32\include\resource.h"
+
+1000 DIALOG 0, 0, 200, 154
+STYLE DS_CENTER | WS_POPUP | WS_VISIBLE | WS_SYSMENU | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL "", 1004, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP | SS_NOTIFY, 5, 6, 73, 14
+    CONTROL "", 1005, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP | SS_NOTIFY, 5, 24, 73, 14
+    CONTROL "", 1006, STATIC, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP | SS_NOTIFY, 5, 42, 73, 14
+
+    CONTROL     "BG", 1001, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 0, 0, 300, 300
+    EDITTEXT    1002, 15, 91, 170, 10, NOT WS_BORDER | ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT    1003, 15, 114, 170, 10, NOT WS_BORDER | ES_CENTER | ES_AUTOHSCROLL
+END
+
+101 DIALOG 109, 25, 332, 178
+STYLE DS_CENTER | WS_POPUP | WS_VISIBLE | WS_SYSMENU | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+   CONTROL     "AB_RIGHT", 202, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 325, 52, 6, 40
+   CONTROL     "AB_LEFT", 201, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 0, 52, 6, 40
+   CONTROL     "AB_BOTTOM", 203, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 6, 172, 170, 120
+   CONTROL     "AB_TOP", 190, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 0, 0, 332, 52//498, 96
+   CONTROL      "", 150, STATIC, SS_BLACKRECT | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 52, 320, 120
+   PUSHBUTTON   "+", 151, 301, 32, 15, 15, BS_FLAT
+   PUSHBUTTON   "-", 152, 281, 32, 15, 15, BS_FLAT
+   //GROUPBOX     "Speed", 0, 270, 4, 56, 45, BS_CENTER | BS_FLAT//| WS_DISABLED
+   CTEXT        "Speed", 199, 270, 4, 56, 12,
+   LTEXT        "Current Speed:", 200, 271, 13, 60, 9
+   CTEXT	"71", 153, 275, 23, 48, 9
+   //GROUPBOX     "Hard To Beat Cracking Team", 0, 6, 4, 258, 45, BS_CENTER | BS_FLAT//|WS_DISABLED
+   CTEXT	"Hard To Beat Cracking Team", 191, 6, 4, 258, 12
+   LTEXT        "Cracker...:", 192, 11, 13, 33, 8//, WS_DISABLED
+   LTEXT        "Coder......:", 193, 11, 21, 33, 8//, WS_DISABLED
+   LTEXT        "e-mail......:", 194, 11, 29, 33, 8//, WS_DISABLED
+   LTEXT        "www.......:", 195, 11, 37, 33, 8//, WS_DISABLED
+   LTEXT        "[ ReWolf ]", 196, 50, 13, 80, 8
+   LTEXT        "[ ReWolf ]", 197, 50, 21, 80, 8
+   LTEXT        "[ rewolf@poczta.onet.pl ]", 154, 50, 29, 80, 8, SS_NOTIFY
+   LTEXT        "[ www.rewolf.prv.pl ]", 155, 50, 37, 80, 8, SS_NOTIFY
+
+   LTEXT        "Group Contact:", 198, 180, 17, 70, 8//, WS_DISABLED
+   LTEXT        "[ htbteam.tk ]", 156, 180, 25, 80, 8, SS_NOTIFY
+   LTEXT        "[ htb@go2.pl ]", 157, 180, 34, 80, 8, SS_NOTIFY
+END
+
+500 ICON MOVEABLE PURE LOADONCALL DISCARDABLE "..\Icon2.ico"
+BG BITMAP "main_img256.bmp"
+AB_TOP BITMAP "about_img_top256.bmp"
+AB_LEFT BITMAP "ab_left256.bmp"
+AB_RIGHT BITMAP "ab_right256.bmp"
+AB_BOTTOM BITMAP "ab_bottom256.bmp"
